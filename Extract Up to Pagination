@@ -1,0 +1,374 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "title",
+    "expression": "jython:import re\nexceptions = [\"and\", \"or\", \"the\", \"a\", \"of\", \"in\", \"to\", \"an\", \"for\", \"with\", \"by\", \"at\", \"if\", \"as\", \"from\", \"nor\", \"but\", \"yet\", \"so\", \"through\", \"near\", \"across\", \"about\", \"on\", \"amid\"]\ntitle = value\nlowercase_words = re.split(\" \", title.lower())\nfinal_words = [lowercase_words[0].capitalize()]\nfinal_words += [word if word in exceptions else word.capitalize() for word in lowercase_words[1:]]\nfinal_title = \" \".join(final_words)\nreturn (final_title)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column title using expression jython:import re\nexceptions = [\"and\", \"or\", \"the\", \"a\", \"of\", \"in\", \"to\", \"an\", \"for\", \"with\", \"by\", \"at\", \"if\", \"as\", \"from\", \"nor\", \"but\", \"yet\", \"so\", \"through\", \"near\", \"across\", \"about\", \"on\", \"amid\"]\ntitle = value\nlowercase_words = re.split(\" \", title.lower())\nfinal_words = [lowercase_words[0].capitalize()]\nfinal_words += [word if word in exceptions else word.capitalize() for word in lowercase_words[1:]]\nfinal_title = \" \".join(final_words)\nreturn (final_title)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "subtitle",
+    "expression": "jython:import re\nexceptions = [\"and\", \"or\", \"the\", \"a\", \"of\", \"in\", \"to\", \"an\", \"for\", \"with\", \"by\", \"at\", \"if\", \"as\", \"from\", \"nor\", \"but\", \"yet\", \"so\", \"through\", \"near\", \"across\", \"about\", \"on\", \"amid\"]\ntitle = value\nlowercase_words = re.split(\" \", title.lower())\nfinal_words = [lowercase_words[0].capitalize()]\nfinal_words += [word if word in exceptions else word.capitalize() for word in lowercase_words[1:]]\nfinal_title = \" \".join(final_words)\nreturn (final_title)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column subtitle using expression jython:import re\nexceptions = [\"and\", \"or\", \"the\", \"a\", \"of\", \"in\", \"to\", \"an\", \"for\", \"with\", \"by\", \"at\", \"if\", \"as\", \"from\", \"nor\", \"but\", \"yet\", \"so\", \"through\", \"near\", \"across\", \"about\", \"on\", \"amid\"]\ntitle = value\nlowercase_words = re.split(\" \", title.lower())\nfinal_words = [lowercase_words[0].capitalize()]\nfinal_words += [word if word in exceptions else word.capitalize() for word in lowercase_words[1:]]\nfinal_title = \" \".join(final_words)\nreturn (final_title)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "title",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column title using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "subtitle",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column subtitle using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "title",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column title using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "subtitle",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column subtitle using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "title",
+    "expression": "grel:value.chomp(\" :\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column title using expression grel:value.chomp(\" :\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "title",
+    "expression": "grel:value.chomp(\" /\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column title using expression grel:value.chomp(\" /\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "subtitle",
+    "expression": "grel:value.chomp(\" :\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column subtitle using expression grel:value.chomp(\" :\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "subtitle",
+    "expression": "grel:value.chomp(\" /\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column subtitle using expression grel:value.chomp(\" /\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "subtitle",
+          "expression": "isBlank(value)",
+          "columnName": "subtitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "title",
+    "expression": "grel:cells.title.value + \": \" + cells.subtitle.value",
+    "onError": "set-to-blank",
+    "newColumnName": "label",
+    "columnInsertIndex": 1,
+    "description": "Create column label at index 1 based on column title using expression grel:cells.title.value + \": \" + cells.subtitle.value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "subtitle",
+          "expression": "isBlank(value)",
+          "columnName": "subtitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "title",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "label2",
+    "columnInsertIndex": 1,
+    "description": "Create column label2 at index 1 based on column title using expression grel:value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "label",
+    "expression": "join ([cells['label'].value,cells['label2'].value],)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column label using expression join ([cells['label'].value,cells['label2'].value],)"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "title",
+      "label",
+      "subtitle",
+      "statedAs",
+      "creator",
+      "genre",
+      "submittedTo",
+      "inception",
+      "language",
+      "pages",
+      "degreeSupervisor",
+      "hdlURI",
+      "OCLCID"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "statedAs",
+    "expression": "grel:value.chomp(\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column statedAs using expression grel:value.chomp(\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "statedAs",
+    "expression": "value.replace(\"by \",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column statedAs using expression value.replace(\"by \",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "creator",
+    "expression": "grel:if(value.contains(\"http:\"),\n\"http://\" + value.rpartition(\"http://\")[2],\nvalue.rpartition(/\\-[a-z]+/)[0].rpartition(/\\,author/)[0].rpartition(/\\d+/)[0].chomp(\",\")\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column creator using expression grel:if(value.contains(\"http:\"),\n\"http://\" + value.rpartition(\"http://\")[2],\nvalue.rpartition(/\\-[a-z]+/)[0].rpartition(/\\,author/)[0].rpartition(/\\d+/)[0].chomp(\",\")\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "creator",
+    "expression": "grel:if(value.contains(\",\"),\n(cells.statedAs.value),\n(value))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column creator using expression grel:if(value.contains(\",\"),\n(cells.statedAs.value),\n(value))"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "genre",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Ph. D."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "doctoral thesis"
+      }
+    ],
+    "description": "Mass edit cells in column genre"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "genre",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "M.S."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "master's thesis"
+      }
+    ],
+    "description": "Mass edit cells in column genre"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "inception",
+    "expression": "grel:value.chomp(\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column inception using expression grel:value.chomp(\".\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "genre",
+    "expression": "grel:value + \" by \" + cells.statedAs.value + \", \" + cells.inception.value",
+    "onError": "set-to-blank",
+    "newColumnName": "Den",
+    "columnInsertIndex": 6,
+    "description": "Create column Den at index 6 based on column genre using expression grel:value + \" by \" + cells.statedAs.value + \", \" + cells.inception.value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "language",
+    "expression": "grel:if(value.contains(\"eng\"),\n\"Q1860\",\nvalue)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column language using expression grel:if(value.contains(\"eng\"),\n\"Q1860\",\nvalue)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "language",
+    "expression": "grel:if(value.contains(\"zxx\"),\nnull,\nvalue)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column language using expression grel:if(value.contains(\"zxx\"),\nnull,\nvalue)"
+  }
+]
